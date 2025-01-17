@@ -1,0 +1,11 @@
+service:
+  backup:
+    image: ghcr.io/yumusb/autobackup:latest
+    restart: always
+    volumes:
+      - ./:/app
+    environment:
+      - GITHUB_USER=yumusb
+      - GITHUB_TOKEN=xxxx
+      - GIT_REMOTE_URL=https://github.com/yumusb/xxxx_backup.git
+      - CRON_SCHEDULE=*/5 * * * *
