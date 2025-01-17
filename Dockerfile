@@ -10,7 +10,7 @@ ENV GITHUB_TOKEN=
 ENV GIT_REMOTE_URL=
 ENV GIT_EMAIL=github-actions[bot]@users.noreply.github.com
 ENV GIT_NAME=AutoBackup
-ENV CRON_SCHEDULE=0 * * * *
+ENV CRON_SCHEDULE="0 * * * *"
 
 # 启动 Cron 服务并动态创建任务
 CMD ["/bin/sh", "-c", "echo \"$CRON_SCHEDULE /bin/sh /usr/local/bin/backup.sh\" | crontab - && crond -f -L /dev/stdout"]
