@@ -13,4 +13,4 @@ ENV GIT_NAME=AutoBackup
 ENV CRON_SCHEDULE="0 * * * *"
 
 # 启动 Cron 服务并动态创建任务
-CMD ["/bin/sh", "-c", "echo \"$CRON_SCHEDULE /bin/sh /usr/local/bin/backup.sh\" | crontab - && crond -f -L /dev/stdout"]
+CMD ["/bin/sh", "-c", "echo \"$CRON_SCHEDULE /bin/sh /usr/local/bin/backup.sh\" | crontab - && crond -f"]

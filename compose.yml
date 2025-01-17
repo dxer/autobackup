@@ -5,7 +5,7 @@ service:
     volumes:
       - ./:/app
     environment:
-      - GITHUB_USER=yumusb
-      - GITHUB_TOKEN=xxxx
-      - GIT_REMOTE_URL=https://github.com/yumusb/xxxx_backup.git
-      - CRON_SCHEDULE=*/5 * * * *
+      - GITHUB_USER=xxx # github用户名
+      - GITHUB_TOKEN=xxxx # github token
+      - GIT_REMOTE_URL=https://github.com/xxxx/xxxx_backup.git # git仓库地址需要是 https 形式
+      - CRON_SCHEDULE=*/5 * * * * # 定时任务表达式，每5分钟备份一次
