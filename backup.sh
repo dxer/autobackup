@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 log() {
     current_time=$(date "+%Y-%m-%d %H:%M:%S")
