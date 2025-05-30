@@ -64,7 +64,7 @@ else
 fi
 
 # 执行自定义的脚本
-if [ ! -f "/app/pre_script.sh" ];then
+if [ -f "/app/pre_script.sh" ];then
   sh /app/init.sh
 fi
 
