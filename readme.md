@@ -3,7 +3,6 @@
 📁 自动化备份工具 | 支持本地/远程文件/数据库备份
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dxer/autobackup/CI)
-[![Docker Pulls](https://img.shields.io/docker/pulls/dxer/autobackup)](https://hub.docker.com/r/dxer/autobackup)
 
 ## 功能特性
 
