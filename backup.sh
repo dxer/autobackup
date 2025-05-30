@@ -65,7 +65,7 @@ fi
 
 # 执行自定义的脚本
 if [ -f "/app/pre_script.sh" ];then
-  sh /app/init.sh
+  sh /app/pre_script.sh
 fi
 
 # 执行 Git 提交和推送
