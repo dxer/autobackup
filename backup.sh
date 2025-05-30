@@ -63,9 +63,10 @@ else
     fi
 fi
 
-# 执行自定义的脚本
-if [ -f "/app/pre_script.sh" ];then
-  sh /app/pre_script.sh
+# 执行前置脚本
+if [ -f "$PRE_SCRIPT" ];then
+  echo "执行前置脚本：$PRE_SCRIPT"
+  sh $PRE_SCRIPT
 fi
 
 # 执行 Git 提交和推送
@@ -79,4 +80,10 @@ else
     else
         log "推送失败，请检查网络连接或权限。"
     fi
+fi
+
+# 执行后置脚本
+if [ -f "$POST_SCRIPT" ];then
+    echo "执行后置脚本：$POST_SCRIPT"
+  sh $POST_SCRIPT
 fi
