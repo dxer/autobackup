@@ -63,6 +63,11 @@ else
     fi
 fi
 
+# 执行自定义的脚本
+if [ ! -f "/app/pre_script.sh" ];then
+  sh /app/init.sh
+fi
+
 # 执行 Git 提交和推送
 git add -A
 if git diff --cached --quiet; then
