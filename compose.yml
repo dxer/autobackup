@@ -8,4 +8,6 @@ service:
       - GITHUB_USER=xxx # github用户名
       - GITHUB_TOKEN=xxxx # github token
       - GIT_REMOTE_URL=https://github.com/xxxx/xxxx_backup.git # git仓库地址需要是 https 形式
+      - PRE_SCRIPT=
+      - POST_SCRIPT=
       - CRON_SCHEDULE=*/5 * * * * # 定时任务表达式，每5分钟备份一次
